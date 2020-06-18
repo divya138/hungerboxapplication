@@ -23,7 +23,11 @@ public class Order {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long orderId;
 	private Double orderPrice;
+<<<<<<< HEAD
 	private int quantity;
+=======
+	
+>>>>>>> 8322256d1ba0f76580d58dc3dceaba3367847b17
 	
 	@ManyToOne(cascade = CascadeType.MERGE)
 	private Employee employee;
@@ -44,6 +48,7 @@ public class Order {
 		this.orderPrice = orderPrice;
 	}
 
+<<<<<<< HEAD
 	public int getQuantity() {
 		return quantity;
 	}
@@ -52,6 +57,8 @@ public class Order {
 		this.quantity = quantity;
 	}
 
+=======
+>>>>>>> 8322256d1ba0f76580d58dc3dceaba3367847b17
 	
 
 	public Employee getEmployee() {

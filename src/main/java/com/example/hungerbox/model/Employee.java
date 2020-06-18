@@ -1,4 +1,10 @@
 package com.example.hungerbox.model;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 8322256d1ba0f76580d58dc3dceaba3367847b17
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

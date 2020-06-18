@@ -4,6 +4,10 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+<<<<<<< HEAD
+=======
+import javax.persistence.FetchType;
+>>>>>>> 8322256d1ba0f76580d58dc3dceaba3367847b17
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,7 +30,11 @@ public class Item {
 	private String itemDescription;
 	private Double unitPrice;
 	
+<<<<<<< HEAD
     @JsonIgnore
+=======
+
+>>>>>>> 8322256d1ba0f76580d58dc3dceaba3367847b17
 	@ManyToOne(cascade = CascadeType.MERGE)
 	private Vendor vendor;
 

@@ -1,7 +1,10 @@
 package com.example.hungerbox.exception;
 
 import java.time.LocalDate;
+<<<<<<< HEAD
 import java.time.LocalDateTime;
+=======
+>>>>>>> 8322256d1ba0f76580d58dc3dceaba3367847b17
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +21,50 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @ControllerAdvice
 public class ControllerAdvisor extends ResponseEntityExceptionHandler {
+<<<<<<< HEAD
+=======
+
+	
+	@ExceptionHandler(EmployeeNotFoundException.class)
+	public ResponseEntity<Object> handleEmployeeNotFoundException(EmployeeNotFoundException ex,
+			WebRequest request) {
+
+		Map<String, Object> body = new LinkedHashMap<>();
+		body.put("message", "employee is not found");
+
+		return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler(ItemNotFoundException.class)
+	public ResponseEntity<Object> handleItemNotFoundException(ItemNotFoundException ex,
+			WebRequest request) {
+
+		Map<String, Object> body = new LinkedHashMap<>();
+		body.put("message", "items are not found");
+
+		return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler(PaymentNotSuccessfulException.class)
+	public ResponseEntity<Object> handlePaymentNotSuccessfulException(PaymentNotSuccessfulException ex,
+			WebRequest request) {
+
+		Map<String, Object> body = new LinkedHashMap<>();
+		body.put("message", "payment was not successfull");
+
+		return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+	}
+	@ExceptionHandler(OrderDetailsNotFoundException.class)
+	public ResponseEntity<Object> handleOrderDetailsNotFoundException(OrderDetailsNotFoundException ex,
+			WebRequest request) {
+
+		Map<String, Object> body = new LinkedHashMap<>();
+		body.put("message", "order details should not be empty");
+
+		return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+	}
+
+>>>>>>> 8322256d1ba0f76580d58dc3dceaba3367847b17
 	
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
@@ -34,6 +81,7 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
 		return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
 	}
+<<<<<<< HEAD
 	@ExceptionHandler(VendorNotFoundException.class)
 	public ResponseEntity<Object> handleUserNotFoundException1(VendorNotFoundException ex, WebRequest request) {
 
@@ -44,4 +92,6 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 		return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
 	}
 
+=======
+>>>>>>> 8322256d1ba0f76580d58dc3dceaba3367847b17
 }
